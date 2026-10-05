@@ -1,0 +1,125 @@
+#==============Doctors=============
+#api call for add
+###
+GET http://127.0.0.1:8000/doctors/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/doctors/
+Content-Type: application/json
+
+{
+    "name":"devika",
+    "specialization":"neurology",
+    "fee":"680",
+    "qualification":"mbbs",
+    "email":"devika123@gmail.com"
+}
+
+# api for fetching doctor dtails
+###
+GET http://127.0.0.1:8000/doctors/1/
+Accept: application/json
+
+#api for updating
+###
+GET http://127.0.0.1:8000/doctors/2/
+Accept: application/json
+
+{
+    "name":"devika",
+    "specialization":"neurology",
+    "fee":"700",
+    "qualification":"mbbs",
+    "email":"devika123@gmail.com"
+}
+
+
+#api for deleting doctor
+###
+DELETE http://127.0.0.1:8000/doctors/1/
+Accept: application/json
+
+
+#v2 end points
+###
+GET http://127.0.0.1:8000/v2/doctors/
+Accept: application/json
+
+#adding
+###
+POST  http://127.0.0.1:8000/v2/doctors/
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"pradeep",
+    "specialization":"neurology",
+    "fee":"400",
+    "qualification":"mbbs",
+    "email":"pradeep123@gmail.com"
+}
+
+
+#api call for fetching
+###
+GET http://127.0.0.1:8000/v2/doctors/2/
+Accept: application/json
+
+#for update
+###
+PUT http://127.0.0.1:8000/v2/doctors/2/
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "navaneeth",
+  "specialization": "cardiology",
+  "fee": -550,
+  "qualification": "mbbs",
+  "email": "navaneeth123@gmail.com"
+}
+
+#api call for creating admin user
+###
+POST http://127.0.0.1:8000/v2/user/
+Content-Type: application/json
+
+{
+    "username":"adminuser",
+    "email":"adminuser@gmail.com",
+    "password":"adminuser"
+}
+
+#appoinment
+
+#api call for list all appointment
+###
+GET http://127.0.0.1:8000/appointment/
+Accept: application/json
+
+#for book an appoinment
+###
+POST http://127.0.0.1:8000/appointment/
+Content-Type: application/json
+
+{
+                    "patient_name":"tom",
+                    "phone" :472945076,
+                    "doctor":2,
+                    "appointment_date":"2026-5-1",
+                    "problem" :"weezing" 
+}
+
+##v2
+
+#api call for add new user
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+    "username":"django",
+    "email":"django@gmail.com",
+    "password":"password@123"
+}
