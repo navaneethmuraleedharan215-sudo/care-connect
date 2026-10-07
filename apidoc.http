@@ -107,7 +107,7 @@ Content-Type: application/json
                     "patient_name":"tom",
                     "phone" :472945076,
                     "doctor":2,
-                    "appointment_date":"2026-5-1",
+                    "appointment_date":"2026-05-01",
                     "problem" :"weezing" 
 }
 
@@ -123,3 +123,35 @@ Content-Type: application/json
     "email":"django@gmail.com",
     "password":"password@123"
 }
+
+
+
+###
+GET http://127.0.0.1:8000/v2/booking/appointment/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/v2/booking/appointment/
+Content-Type:  application/json
+Authorization: Basic django:password@123
+
+{
+    "patient_name":"jerry",
+    "phone" :472945076,
+    "doctor":2,
+    "appointment_date":"2026-10-05",
+    "problem" :"weezing" 
+}
+
+
+#for retriving
+###
+GET http://127.0.0.1:8000/v2/booking/appointment/1/
+Accept: application/json
+Authorization: Basic django:password@123
+
+
+#for updte
+###
+PUT http://127.0.0.1:8000/v2/booking/appointment/1/
